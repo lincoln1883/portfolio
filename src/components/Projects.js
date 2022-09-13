@@ -12,17 +12,17 @@ const Projects = () => {
 					<h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
 						My Projects
 					</h1>
-					<p className="lg: w-2/3 mx-auto leading-relaxed text-base">
+					<p className="lg:w-2/3 mx-auto leading-relaxed text-base">
 						Here on display are a few of the projects i can say i am proud of
 						built while learning on Codecademy's platform and a idea project.
 					</p>
 				</div>
-				<div className="flex flex-wrap -m-4">
+				<div className="flex flex-wrap -m-4 ">
 					{projects.map((project) => (
 						<a
 							href={project.link}
 							key={project.image}
-							className="sm: w-1/2 w-100 p-4">
+							className="sm:w-1/2 w-100 p-4">
 							<div className="flex relative">
 								<img
 									alt="gallery"
