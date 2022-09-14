@@ -12,8 +12,8 @@ const Skills = () => {
 						Skills &amp; Technologies
 					</h1>
 					<p className="flex flex-base leading-relaxed xl:w-2/4 lg:3/4 mx-auto">
-						These are the technologies have been learning about and applying to
-						the projects to my projects.
+						These are the technologies have been learning, and applying to the
+						projects.
 					</p>
 				</div>
 				<div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">

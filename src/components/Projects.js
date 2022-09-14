@@ -13,8 +13,8 @@ const Projects = () => {
 						My Projects
 					</h1>
 					<p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-						Here on display are a few of the projects i can say i am proud of
-						built while learning on Codecademy's platform and a idea project.
+						Here on display are a few of the projects i am proud of building
+						while learning on Codecademy's platform.
 					</p>
 				</div>
 				<div className="flex flex-wrap -m-4 ">
