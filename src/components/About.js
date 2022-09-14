@@ -1,6 +1,6 @@
 import React from "react";
 
-import Image from "../img/IMG.jpg";
+import Image from "../img/IMG_2.jpg";
 
 const About = () => {
 	return (
@@ -12,8 +12,8 @@ const About = () => {
 						<br className=" hidden lg:inline-block" /> Web Developer.
 					</h1>
 					<p className="mb-8 leading-relaxed">
-						Im a self taught developer,eager to build solutions for everyday
-						problems with the vast resources available, and researching ways to
+						Im a self taught developer, eager to build solutions for everyday
+						problems with the vast resources available, and finding ways to
 						improve my skills.
 					</p>
 					<div className="flex justify-center">
