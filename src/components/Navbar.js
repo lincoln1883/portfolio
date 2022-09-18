@@ -60,14 +60,14 @@ const Navbar = () => {
 									</li>
 									<li>
 										<a
-											href="https://github.com"
+											href="https://github.com/lincoln1883"
 											className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:4 md:mt-0">
 											<AiFillGithub className="w-6 h-6 ml-1" />
 										</a>
 									</li>
 									<li>
 										<a
-											href="https://Linkedin.com"
+											href="https://Linkedin.com/in/lincoln-gibson"
 											className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:4 md:mt-0">
 											<AiFillLinkedin className="w-6 h-6 ml-1" />
 										</a>
