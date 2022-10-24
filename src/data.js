@@ -23,14 +23,14 @@ export const projects = [
 		image: "./project-3.png",
 		link: "https://sensational-crisp-c206f7.netlify.app",
 	},
-	// {
-	// 	title: "Epic Todo App",
-	// 	subtitle: "React Hooks",
-	// 	description:
-	// 		"Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-	// 	image: "./project-4.gif",
-	// 	link: "https://reactbootcamp.com",
-	// },
+	{
+		title: "Cafe ",
+		subtitle: "HTML and CSS",
+		description:
+			"I contributed to the building of this website as apart of the intended humanitarian efforts by owners,who wanted to assist Ukranian refugees with breakfast and lunch. ",
+		image: "./project-4.png",
+		link: "https://thusbanduk.github.io/CafeKalyna",
+	},
 ];
 
 // export const testimonials = [
