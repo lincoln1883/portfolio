@@ -16,12 +16,12 @@ export const projects = [
 		link: "https://illustrious-chaja-ec35b5.netlify.app",
 	},
 	{
-		title: "Appointment Planner",
-		subtitle: "React & Redux ",
+		title: "Handywork",
+		subtitle: "React,Redux,Nodejs,Jest,Express,Postgres,Tailwind  ",
 		description:
-			"This  project was built using React-redux as part of the Codecademy frontend development course demonstrating knowledge of state management using Redux",
+			"This  project was built was done as part of aChingu voyage project which taught us how software is developed using the agile scrum methodology. The technologies we used include React, Redux,Tailwind,Jest, Nodejs, Express and Postgres.",
 		image: "./project-3.png",
-		link: "https://sensational-crisp-c206f7.netlify.app",
+		link: "https://handywork-clients.netlify.app",
 	},
 	{
 		title: "Cafe ",
@@ -33,29 +33,13 @@ export const projects = [
 	},
 ];
 
-// export const testimonials = [
-// 	{
-// 		quote:
-// 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quod necessitatibus quidem impedit facilis? Distinctio laboriosam veritatis recusandae minus. Voluptatum accusantium hic laudantium soluta ea sapiente cupiditate officia maiores itaque.",
-// 		image: "https://randomuser.me/api/portraits/men/1.jpg",
-// 		name: "Jesse Hicks",
-// 		company: "Zoozle",
-// 	},
-// 	{
-// 		quote:
-// 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quod necessitatibus quidem impedit facilis? Distinctio laboriosam veritatis recusandae minus. Voluptatum accusantium hic laudantium soluta ea sapiente cupiditate officia maiores itaque.",
-// 		image: "https://randomuser.me/api/portraits/men/94.jpg",
-// 		name: "Ruben Alvarez",
-// 		company: "Dooble.io",
-// 	},
-// ];
-
 export const skills = [
-	"CSS",
-	"HTML",
 	"GIT",
 	"JAVASCRIPT",
 	"REACT",
 	"REDUX",
-	// "MATERIAL UI",
+	"NODE",
+	"EXPRESS",
+	"TAILWIND",
+	"POSTGRES",
 ];
