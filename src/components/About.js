@@ -12,12 +12,7 @@ const About = () => {
 						<br className=" hidden lg:inline-block" /> Fullstack Developer.
 					</h1>
 					<p className="mb-8 leading-relaxed">
-						I'm a self-taught web developer eager to build solutions for
-						everyday problems with the vast resources available while finding
-						ways to refine my skills. I spent over ten years in the Cruise
-						Hospitality Industry, serving in various roles including, managerial
-						that refined me as a leader and team player with an understanding of
-						cultural diversity, time management and productivity.
+						I'm a skilled full-stack developer dedicated to writing clean code, crafting accessible designs, and excelling in remote work environments. Expertise in building web applications shines through mastery of React and Ruby on Rails. Communicates effectively, ensuring seamless collaboration with colleagues, clients, and stakeholders. Demonstrates exceptional problem-solving skills, tackling both technical challenges and project management complexities.
 					</p>
 					<div className="flex justify-center">
 						<a
