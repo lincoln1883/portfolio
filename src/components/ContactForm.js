@@ -3,7 +3,7 @@ import { useForm, ValidationError } from "@formspree/react";
 
 const ContactForm = () => {
 	const [state, submitHandler] = useForm("mvodnpzy");
-	if (state.succeeded) {
+	if (state. succeeded) {
 		return <p>Email was Successfully sent!</p>;
 	}
 
@@ -15,10 +15,6 @@ const ContactForm = () => {
 			<h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
 				Contact Me
 			</h2>
-			{/* <p className="leading-relaxed mb-5">
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum suscipit
-				officia aspernatur veritatis. Asperiores, aliquid?
-			</p> */}
 			<div className="relative mb-4">
 				<label htmlFor="name" className="leading-7 text-sm text-gray-400">
 					Name
@@ -34,7 +30,7 @@ const ContactForm = () => {
 				<ValidationError prefix="Name" field="name" errors={state.errors} />
 			</div>
 			<div className="relative mb-4">
-				<label htmlFor="email" className="leading-7 text-sm text-gray-400">
+				<label htmlFor=" email" className="leading-7 text-sm text-gray-400">
 					Email
 				</label>
 				<input
