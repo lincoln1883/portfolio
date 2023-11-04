@@ -14,7 +14,7 @@ const Projects = () => {
 					</h1>
 					<p className="lg:w-2/3 mx-auto leading-relaxed text-base">
 						Here on display are a few of the projects i am proud of building
-						while learning on Codecademy's platform.
+						while learning on Codecademy.
 					</p>
 				</div>
 				<div className="flex flex-wrap -m-4 ">
