@@ -1,39 +1,21 @@
 import React from "react";
-
-import Image from "../img/IMG_2.jpg";
+import {BiImage} from "react-icons/bi";
 
 const About = () => {
 	return (
 		<section id="about">
-			<div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
-				<div className="lg: flex-grow md:w-1.5 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-					<h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-						Hi, I'm Lincoln
-						<br className=" hidden lg:inline-block" /> Fullstack Developer.
-					</h1>
-					<p className="mb-8 leading-relaxed">
-						I'm a skilled full-stack developer dedicated to writing clean code, crafting accessible designs, and excelling in remote work environments. Expertise in building web applications shines through mastery of React and Ruby on Rails. Communicates effectively, ensuring seamless collaboration with colleagues, clients, and stakeholders. Demonstrates exceptional problem-solving skills, tackling both technical challenges and project management complexities.
+			<div className="container px-5 py-10 mx-auto flex flex-col justify-center items-center">
+				<BiImage className="w-10 inline-block mb-4" />
+				<h2 className="text-white sm:text-4xl text-3xl font-medium title-font">
+				About Me
+			  </h2>
+				<div className="bg-gray-900 max-w-2xl rounded-lg p-10 flex items-center justify-center">
+					<p className="mt-1 leading-relaxed md:text-2xl">
+						A dedicated professional with over a decade of experience in the hospitality industry,
+						I have transitioned my strong work ethic and commitment to excellence into a thriving career as a software developer,
+						specializing in remote development. I have a passion for coding, a love for watching sports,
+						and a knack for video games, making my journey in technology both purposeful and personally fulfilling.
 					</p>
-					<div className="flex justify-center">
-						<a
-							href="#contact"
-							className="inline-flex text-white  border-0 py-2 px-6 focus: outline-none 
-            hover: bg-green-600 rounded text-lg">
-							Contact Me
-						</a>
-						<a
-							href="#projects"
-							className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">
-							See My Projects
-						</a>
-					</div>
-				</div>
-				<div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-					<img
-						className="object-cover object-center rounded-xl"
-						alt="hero image"
-						src={Image}
-					/>
 				</div>
 			</div>
 		</section>

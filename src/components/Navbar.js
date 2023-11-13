@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { AiOutlineSend } from "react-icons/ai";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
@@ -11,15 +9,15 @@ const Navbar = () => {
 	};
 
 	return (
-		<header className="bg-gray-800 md:sticky top-0 z-10 flex flex-wrap items-center justify-evenly px-2 py-3">
+		<header className="bg-gray-800 md:sticky top-0 z-10 flex flex-wrap items-center justify-evenly">
 			<div className="container px-4 mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center justify-between">
-				<div className="w-full relative px-4">
+				<div className="w-full relative">
 					<nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gray-800 rounded">
 						<div className="container px-1 mx-auto flex flex-wrap items-center justify-between">
 							<div className="w-full relative flex justify-between lg:w-auto px-1 lg:static lg:block lg:justify-start">
 								<a
 									className="text-lg font-bold leading-relaxed inline-block mr-1 py-2 whitespace-nowrap uppercase text-white"
-									href="#about">
+									href="#home">
 									LINCOLN GIBSON
 								</a>
 								<button
@@ -55,21 +53,13 @@ const Navbar = () => {
 											className="px-3 py-2 flex items-center text-md uppercase font-bold leading-snug text-white hover:opacity-75"
 											href="#contact">
 											Contact Me
-											<AiOutlineSend className=" w-5 ml-1 mb-1" />
 										</a>
 									</li>
-									<li>
+									<li className="nav-item">
 										<a
-											href="https://github.com/lincoln1883"
-											className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:4 md:mt-0">
-											<AiFillGithub className="w-6 h-6 ml-1" />
-										</a>
-									</li>
-									<li>
-										<a
-											href="https://Linkedin.com/in/lincoln-gibson"
-											className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:4 md:mt-0">
-											<AiFillLinkedin className="w-6 h-6 ml-1" />
+											className="px-3 py-2 flex items-center text-md uppercase font-bold leading-snug text-white hover:opacity-75"
+											href="#about">
+											About Me
 										</a>
 									</li>
 								</ul>
