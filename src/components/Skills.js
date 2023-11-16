@@ -11,7 +11,7 @@ const Skills = () => {
 					<h1 className="sm:text-4xl text-3xl font-medium title-font text-white mb-4">
 						Skills &amp; Technologies
 					</h1>
-					<p className="flex flex-base leading-relaxed xl:w-2/4 lg:3/4 mx-auto">
+					<p className="text-center leading-relaxed xl:w-2/4 lg:3/4 mx-auto">
 						These are the technologies have been learning, and applying to the
 						projects.
 					</p>
