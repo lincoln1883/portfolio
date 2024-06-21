@@ -11,7 +11,7 @@ const Home = () => {
 	return (
 			<section id="home">
 				<div className="container mx-auto flex px-10 py-20 sm:flex-row items-center flex-col-reverse gap-4">
-					<div className="lg:flex-grow md:w-[50%] flex flex-col gap-1 sm:items-start sm:text-left sm:mb-0 items-center text-center mb-0">
+					<div className="lg:flex-grow sm:w-[50%] flex flex-col gap-1 sm:items-start sm:text-left sm:mb-0 items-center text-center mb-0">
 						<h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
 							Hi, I'm Lincoln
 							<br className=" hidden lg:inline-block" /> Fullstack Developer.
@@ -59,7 +59,7 @@ const Home = () => {
 							</a>
 						</div>
 					</div>
-					<div className="lg:max-w-lg md:w-[50%] mb-10 sm:mb-0 flex justify-center">
+					<div className="lg:max-w-lg sm:w-[50%] mb-10 sm:mb-0 flex justify-center self-start">
 						<img
 								className="object-cover object-center rounded-full"
 								alt="hero"
