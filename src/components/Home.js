@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "../img/IMG_2.jpg";
+import Image from "../img/my-image.jpg";
 import {
 	AiFillGithub,
 	AiFillLinkedin,
@@ -61,7 +61,7 @@ const Home = () => {
 					</div>
 					<div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
 						<img
-								className="object-cover object-center rounded-xl"
+								className="object-cover object-center rounded-full"
 								alt="hero"
 								src={Image}
 						/>
