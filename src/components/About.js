@@ -9,7 +9,7 @@ const About = () => {
 				<h2 className="text-white sm:text-4xl text-3xl font-medium title-font">
 				About Me
 			  </h2>
-				<div className="bg-gray-900 max-w-2xl rounded-lg p-10 flex items-center justify-center">
+				<div className="bg-gray-900 max-w-2xl rounded-lg p-4 sm:p-10 flex items-center justify-center">
 					<p className="mt-1 leading-relaxed md:text-2xl">
 						A dedicated professional with over a decade of experience in the hospitality industry,
 						I have transitioned my strong work ethic and commitment to excellence into a thriving career as a software developer,

@@ -5,7 +5,7 @@ import { BiCode } from "react-icons/bi";
 const Projects = () => {
   return (
     <section id="projects" className="text-gray-400 body-font ">
-      <div className="container px-5 py-10 mx-auto text-center lg:px-40">
+      <div className="container px-4 py-10 mx-auto text-center">
         <div className="flex flex-col w-full mb-20">
           <BiCode className="mx-auto inline-block w-10 mb-4 " />
           <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
@@ -15,20 +15,20 @@ const Projects = () => {
             Here on display are a few of the projects i am proud of building.
           </p>
         </div>
-        <div className="flex justify-center items-center flex-wrap -m-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {projects.map((project) => (
-            <div key={project.id} className="sm:w-1/2 w-100 p-4">
-              <div className="flex relative">
+            <div key={project.id} className="p-2 sm:p-4 ">
+              <div className="flex relative h-[100%]">
                 <img
                   alt="gallery"
-                  className="absolute inset-0 w-full h-full object-fit object-center rounded-lg"
+                  className="absolute inset-0 w-full h-full object-fill rounded-lg"
                   src={project.image}
                 />
                 <div className="px-8 py-10 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
                   <h1 className="title-font text-lg font-medium text-white mb-3">
                     {project.title}
                   </h1>
-                  <p className="leading-relaxed">{project.description}</p>
+                  <p className="leading-relaxed line-clamp-1">{project.description}</p>
                   <div className="flex mt-2">
                     <div className="w-[100%]">
                       <div className="flex flex-wrap mt-1">
@@ -65,6 +65,8 @@ const Projects = () => {
                     </a>
                     <a
                       href={project.source}
+                      rel="noreferrer"
+                      target="_blank"
                       className="flex items-center mt-4 text-white bg-gray-800 border-0 py-2 px-3 focus:outline-none hover:bg-gray-700 rounded ml-4"
                     >
                       Source Code
