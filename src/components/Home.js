@@ -6,6 +6,7 @@ import {
 	AiFillMediumCircle,
 	AiFillTwitterCircle
 } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Home = () => {
 	return (
@@ -51,12 +52,11 @@ const Home = () => {
 							</li>
 						</ul>
 						<div className="flex justify-center mt-6">
-							<a
-									href="#contact"
+							<Link to="/contact"
 									className="inline-flex text-white  border-0 py-2 px-6 focus: outline-none
             hover: bg-green-600 rounded text-lg">
 								Say Hello
-							</a>
+							</Link>
 						</div>
 					</div>
 					<div className="lg:max-w-lg sm:w-[50%] mb-10 sm:mb-0 flex justify-center self-start">

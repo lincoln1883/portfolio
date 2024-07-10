@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,12 +16,12 @@ const Navbar = () => {
           <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-gray-800 rounded">
             <div className="container px-1 mx-auto flex flex-wrap items-center justify-between">
               <div className="w-full relative flex justify-between lg:w-auto px-1 lg:static lg:block lg:justify-start">
-                <a
+                <Link
                   className="text-lg font-bold leading-relaxed inline-block mr-1 py-2 whitespace-nowrap uppercase text-white"
-                  href="#home"
+                  to="/"
                 >
                   LINCOLN GIBSON
-                </a>
+                </Link>
                 <button
                   className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none ml-10"
                   type="button"
@@ -38,36 +39,40 @@ const Navbar = () => {
               >
                 <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
                   <li className="nav-item">
-                    <a
+                    <Link
                       className="px-3 py-2 flex items-center text-md uppercase font-bold leading-snug text-white hover:opacity-75"
-                      href="#projects"
+                      to="/projects"
+                      onClick={() => setMenuOpen(false)}
                     >
                       Projects
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a
+                    <Link
                       className="px-3 py-2 flex items-center text-md uppercase font-bold leading-snug text-white hover:opacity-75"
-                      href="#skills"
+                      to="/skills"
+                      onClick={() => setMenuOpen(false)}
                     >
                       Skills
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a
+                    <Link
                       className="px-3 py-2 flex items-center text-md uppercase font-bold leading-snug text-white hover:opacity-75"
-                      href="#contact"
+                      to="/contact"
+                      onClick={() => setMenuOpen(false)}
                     >
                       Contact
-                    </a>
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <a
+                    <Link
                       className="px-3 py-2 flex items-center text-md uppercase font-bold leading-snug text-white hover:opacity-75"
-                      href="#about"
+                      to="/about"
+                      onClick={() => setMenuOpen(false)}
                     >
                       About
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -80,3 +85,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
