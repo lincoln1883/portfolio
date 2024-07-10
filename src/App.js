@@ -1,21 +1,28 @@
+// components/App.js
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Skills from "./components/Skills";
 import Home from "./components/Home";
+import Layout from "./components/Layout";
 
 function App() {
-	return (
-		<main className="text-gray-400 bg-gray-900 body-font">
-			<Navbar />
-			<Home />
-			<Projects />
-			<Skills />
-			<About />
-			<Contact />
-		</main>
-	);
+  return (
+		<Router>
+		<Navbar />
+		<Routes>
+			<Route path="/" element={<Layout />}>
+				<Route index element={<Home />} />
+				<Route path="projects" element={<Projects />} />
+				<Route path="skills" element={<Skills />} />
+				<Route path="about" element={<About />} />
+				<Route path="contact" element={<Contact />} />
+			</Route>
+		</Routes>
+	</Router>
+  );
 }
 
 export default App;
