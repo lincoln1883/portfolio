@@ -1,14 +1,16 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { BiCode } from "react-icons/bi";
 import Project from "./Project";
+import ProjectSkeleton from "./ProjectSkeleton";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(false);
-  
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
-    async function get_repo() {
-      setLoading(true);
+    const fetchProjects = async () => {
       try {
         const response = await fetch('https://api.github.com/graphql', {
           method: 'POST',
@@ -46,34 +48,81 @@ const Projects = () => {
         const data = await response.json();
         const repoData = data.data.user.pinnedItems.nodes;
         setProjects(repoData);
-        console.log(repoData);
       } catch (err) {
-        console.error("It was not possible to get the pinned repositories from GitHub", err);
+        setError(err.message);
+        console.error("Failed to fetch projects:", err);
+      } finally {
+        setLoading(false);
       }
-    }
+    };
 
-    get_repo();
-    setLoading(false);
+    fetchProjects();
   }, []);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
   return (
-    <section id="projects" className="text-gray-400 body-font ">
-      <div className="container px-4 py-10 mx-auto text-center">
-        <div className="flex flex-col w-full mb-20">
-          <BiCode className="mx-auto inline-block w-10 mb-4 " />
-          <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
-            Featured Projects
+    <section className="relative py-20 px-4 min-h-screen">
+      <div className="container mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-16"
+        >
+          <h1 className="sm:text-4xl text-3xl font-medium title-font text-gray-900 dark:text-white mb-4">
+            Projects
+            <BiCode className="mx-auto text-primary-500 w-8 inline-block ml-2" />
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Here on display are a few of the projects i am proud of building.
+          <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-700 dark:text-gray-400">
+            Here are some of my featured projects. Each one is crafted with attention to detail and modern best practices.
           </p>
-        </div>
-        {loading && <p>Loading...</p>}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-1 ">
-          {projects.map((project, index) => (
-            <Project key={index} project={project} />
-          ))}
-        </div>
+        </motion.div>
+
+        <AnimatePresence mode="wait">
+          {loading ? (
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <ProjectSkeleton key={i} />
+              ))}
+            </motion.div>
+          ) : error ? (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="text-center text-red-500 p-8 bg-red-500/10 rounded-lg"
+            >
+              <p>Failed to load projects. Please try again later.</p>
+              <p className="text-sm mt-2 text-gray-400">{error}</p>
+            </motion.div>
+          ) : (
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              {projects.map((project, index) => (
+                <Project key={project.name} project={project} />
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );

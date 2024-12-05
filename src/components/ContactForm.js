@@ -1,71 +1,99 @@
 import React from "react";
+import {BiPhone} from "react-icons/bi";
 import { useForm, ValidationError } from "@formspree/react";
 
 const ContactForm = () => {
-	const [state, submitHandler] = useForm("mvodnpzy");
-	if (state.succeeded) {
-		return <p>Email was Successfully sent!</p>;
-	}
+  const [state, submitHandler] = useForm("mvodnpzy");
+  if (state.succeeded) {
+    return <p>Email was Successfully sent!</p>;
+  }
 
-	return (
-		<form
-			onSubmit={submitHandler}
-			name="contact"
-			className="lg:w-1/3 md:w-1/2 flex flex-col md:m-auto w-full md:py-8 mt-8 md:mt-0">
-			<div className="relative mb-4">
-				<label htmlFor="name" className="leading-7 text-sm text-gray-400">
-					Name
-				</label>
-				<input
-					type="name"
-					id="name"
-					name="name"
-					required
-					placeholder="Your name"
-					className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-bg-indigo-900 text-base outline-none text-gray-100 py-1 px-3 transition-colors duration-200 ease-in-out"
-				/>
-				<ValidationError prefix="Name" field="name" errors={state.errors} />
-			</div>
-			<div className="relative mb-4">
-				<label htmlFor=" email" className="leading-7 text-sm text-gray-400">
-					Email
-				</label>
-				<input
-					type="email"
-					id="email"
-					name="email"
-					required
-					placeholder="Your email"
-					className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-bg-indigo-900 text-base outline-none text-gray-100 py-1 px-3 transition-colors duration-200 ease-in-out"
-				/>
-				<ValidationError prefix="Email" field="email" errors={state.errors} />
-			</div>
-			<div className="relative mb-4">
-				<label htmlFor="message" className="leading-7 text-sm text-gray-400">
-					Message
-				</label>
-				<textarea
-					type="text"
-					id="message"
-					name="message"
-					required
-					placeholder="Enter your message"
-					className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-				/>
-				<ValidationError
-					prefix="Message"
-					field="message"
-					errors={state.errors}
-				/>
-			</div>
-			<button
-				type="submit"
-				disabled={state.submitting}
-				className="text-white bg-indigo-500 border-0 py-2 px-6 focus: rounded text-lg outline-none hover:bg-indigo-600">
-				Submit
-			</button>
-		</form>
-	);
+  return (
+    <section className="py-20 px-4 min-h-screen">
+      <div className="container mx-auto">
+        <div className="text-center mb-16">
+          <h1 className="sm:text-4xl text-3xl font-medium title-font text-gray-900 dark:text-white mb-4">
+            Contact Me
+						<BiPhone className="w-8 inline-block ml-2" />
+          </h1>
+          <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-700 dark:text-gray-400">
+            Feel free to reach out for collaborations or just a friendly hello 👋
+          </p>
+        </div>
+
+        <form
+          onSubmit={submitHandler}
+          name="contact"
+          className="max-w-lg mx-auto bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg"
+        >
+          <div className="mb-4">
+            <label
+              htmlFor="name"
+              className="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2"
+            >
+              Name
+            </label>
+            <input
+              type="name"
+              id="name"
+              name="name"
+              required
+              placeholder="Your name"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-primary-500"
+            />
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="email"
+              className="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Your email"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-primary-500"
+            />
+            <ValidationError prefix="Email" field="email" errors={state.errors} />
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="message"
+              className="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2"
+            >
+              Message
+            </label>
+            <textarea
+              type="text"
+              id="message"
+              name="message"
+              required
+              placeholder="Enter your message"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:ring-2 focus:ring-primary-500 h-32"
+            />
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
+          </div>
+          <div className="flex items-center justify-between">
+            <button
+              type="submit"
+              disabled={state.submitting}
+              className="bg-primary-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+  );
 };
 
 export default ContactForm;
