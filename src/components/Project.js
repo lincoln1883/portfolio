@@ -18,7 +18,7 @@ const Project = ({ project }) => {
         transition={{ duration: 0.2 }}
       >
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
         
         <div className="p-6 h-full flex flex-col">
           <motion.h2
@@ -57,30 +57,30 @@ const Project = ({ project }) => {
               layout
             >
               {project.homepageUrl && (
-                <motion.a
-                  href={project.homepageUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <FiExternalLink className="w-4 h-4" />
-                  <span>Live Demo</span>
-                </motion.a>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <a
+                    href={project.homepageUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 bg-primary-500 text-white rounded-lg font-medium hover:bg-primary-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  >
+                    <FiExternalLink className="w-4 h-4" />
+                    <span>Live Demo</span>
+                  </a>
+                </motion.div>
               )}
               
-              <motion.a
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 border-2 border-gray-700 dark:border-gray-600 text-gray-700 dark:text-gray-400 rounded-lg font-medium hover:border-primary-500 hover:text-primary-500 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <FiGithub className="w-4 h-4" />
-                <span>Source</span>
-              </motion.a>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 border-2 border-gray-700 dark:border-gray-600 text-gray-700 dark:text-gray-400 rounded-lg font-medium hover:border-primary-500 hover:text-primary-500 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500"
+                >
+                  <FiGithub className="w-4 h-4" />
+                  <span>Source</span>
+                </a>
+              </motion.div>
             </motion.div>
           </div>
         </div>
